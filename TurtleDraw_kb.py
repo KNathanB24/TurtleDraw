@@ -11,7 +11,7 @@ total_distance = 0
 prev_x = None
 prev_y = None
 
-filename = "turtle-draw-data.txt"
+filename = input("Enter input file name: ")
 file = open(filename, "r")
 
 for line in file:
