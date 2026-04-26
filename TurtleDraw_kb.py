@@ -23,10 +23,10 @@ for line in file:
         prev_y = None
         continue
 
-    parts = line.split()
-    color = parts[0]
-    x = int(parts[1])
-    y = int(parts[2])
+    components = line.split()
+    color = components[0]
+    x = int(components[1])
+    y = int(components[2])
 
     t.color(color)
 
@@ -46,15 +46,12 @@ for line in file:
 
 file.close()
 
-# display total distance
 t.penup()
 t.goto(100, -200)
 t.write("Total Distance: " + str(round(total_distance, 2)))
 
-# REQUIRED: wait for user input BEFORE closing
 input("Press Enter to exit...")
 
-# safely close turtle AFTER enter
 try:
     turtle.bye()
 except turtle.Terminator:
